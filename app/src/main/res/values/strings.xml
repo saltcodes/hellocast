@@ -3,4 +3,5 @@
     <string name="home">Home</string>
     <string name="library">Library</string>
     <string name="profile">Profile</string>
+    <string name="title_place_holder">React Fundamentals</string>
 </resources>

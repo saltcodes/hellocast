@@ -1,25 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.MainActivity"
+    android:background="@android:color/white">
 
     <androidx.fragment.app.FragmentContainerView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1"
         android:id="@+id/fragmentHost"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bnv"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/navigation_graph"
-        android:name="androidx.navigation.fragment.NavHostFragment"/>
+        app:navGraph="@navigation/navigation_graph" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_above="@+id/bnv"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:gravity="center_vertical"
+        app:elevation="7dp"
+        android:background="@color/colorAccent"
+        android:alpha="0.9">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="38dp"
+            android:layout_height="38dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_image" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="wrap_content"
+            android:text="@string/title_place_holder"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Body2"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_gravity="end"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:src="@drawable/ic_play"/>
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:menu="@menu/menu"/>
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu"
+        app:elevation="0dp"/>
 
-</LinearLayout>
+</RelativeLayout>
