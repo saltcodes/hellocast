@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.google.android.material.transition.MaterialFadeThrough
 import me.johnyoat.hellocast.databinding.FragmentLibraryBinding
 
 class LibraryFragment : Fragment() {
@@ -17,6 +18,7 @@ class LibraryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        enterTransition = MaterialFadeThrough()
         _binding = FragmentLibraryBinding.inflate(inflater,container,false)
         return binding.root
     }
