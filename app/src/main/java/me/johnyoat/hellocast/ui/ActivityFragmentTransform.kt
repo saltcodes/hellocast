@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import me.johnyoat.hellocast.R
 
-class ActivityA : AppCompatActivity() {
+class ActivityFragmentTransform : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_a)
+        setContentView(R.layout.fragment_activity_transform)
     }
 }
