@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.FragmentB"
-    android:orientation="vertical">
+    android:background="@android:color/holo_blue_light"
+    android:orientation="vertical"
+    android:transitionName="pod_cast_transition"
+    tools:context=".ui.podcastdetails.PodCastDetailsFragment">
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/thumnail"
         android:layout_width="match_parent"
@@ -28,8 +31,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:textSize="14sp"
         android:text="@string/hide_bottom_view_on_scroll_behavior"
-        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+        android:textSize="14sp" />
 
 </LinearLayout>

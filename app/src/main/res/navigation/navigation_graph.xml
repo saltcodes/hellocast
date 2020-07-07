@@ -11,24 +11,26 @@
         android:label="Home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_libraryFragment2"
-            app:destination="@id/libraryFragment" />
+            android:id="@+id/action_homeFragment_to_podCastDetailsFragment"
+            app:destination="@id/podCastDetailsFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/libraryFragment"
         android:name="me.johnyoat.hellocast.ui.library.LibraryFragment"
         android:label="Search"
-        tools:layout="@layout/fragment_library" >
-        <action
-            android:id="@+id/action_libraryFragment_to_profileFragment2"
-            app:destination="@id/profileFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_library"/>
 
     <fragment
         android:id="@+id/profileFragment"
         android:name="me.johnyoat.hellocast.ui.profile.ProfileFragment"
         tools:label="Profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/podCastDetailsFragment"
+        android:name="me.johnyoat.hellocast.ui.podcastdetails.PodCastDetailsFragment"
+        android:label="fragment_pod_cast_details"
+        tools:layout="@layout/fragment_pod_cast_details" />
+
 
 </navigation>
