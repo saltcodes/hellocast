@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.ActivityB"
-    android:transitionName="album_transition">
-
+    tools:context=".ui.FragmentB"
+    android:orientation="vertical">
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/thumnail"
         android:layout_width="match_parent"
@@ -34,4 +31,5 @@
         android:textSize="14sp"
         android:text="@string/hide_bottom_view_on_scroll_behavior"
         android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+
 </LinearLayout>
