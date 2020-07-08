@@ -10,7 +10,6 @@ import androidx.navigation.fragment.FragmentNavigatorExtras
 import com.google.android.material.transition.MaterialFadeThrough
 import me.johnyoat.hellocast.R
 import me.johnyoat.hellocast.databinding.FragmentHomeBinding
-import me.johnyoat.hellocast.ui.podcastdetails.PodCastDetailsFragment
 
 class HomeFragment : Fragment() {
 
