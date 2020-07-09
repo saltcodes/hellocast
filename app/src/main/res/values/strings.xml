@@ -8,4 +8,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="podcast_subtitle">Tap subscribe on podcasts to add them here. You\'ll see the latest episodes for all your favourite shows in one place.</string>
     <string name="podcast_title">Add your favourites</string>
+    <string name="search">Search</string>
+    <string name="explore">Explore</string>
+    <string name="tab_text_one">For you</string>
+    <string name="tab_text_two">News</string>
 </resources>

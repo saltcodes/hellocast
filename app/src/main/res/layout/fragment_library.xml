@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.library.LibraryFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.library.LibraryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/explore"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Widget.AppCompat.SearchView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/curve_border_background"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:text="@string/search"
+        app:drawableTint="@android:color/darker_gray" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/genreTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextAppearance="@android:style/TextAppearance.Material.Caption">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_text_one" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_text_two" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/genreViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
