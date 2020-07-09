@@ -28,12 +28,12 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.albumCard.setOnClickListener {
-
-            val extras = FragmentNavigatorExtras(binding.albumCard to "pod_cast_transition")
-            requireActivity().findNavController(R.id.fragmentHost)
-                .navigate(R.id.podCastDetailsFragment, null, null, extras)
-        }
+//        binding.albumCard.setOnClickListener {
+//
+//            val extras = FragmentNavigatorExtras(binding.albumCard to "pod_cast_transition")
+//            requireActivity().findNavController(R.id.fragmentHost)
+//                .navigate(R.id.podCastDetailsFragment, null, null, extras)
+//        }
     }
 
     override fun onDestroy() {

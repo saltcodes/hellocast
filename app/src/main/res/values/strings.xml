@@ -6,4 +6,6 @@
     <string name="title_place_holder">React Fundamentals</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="podcast_subtitle">Tap subscribe on podcasts to add them here. You\'ll see the latest episodes for all your favourite shows in one place.</string>
+    <string name="podcast_title">Add your favourites</string>
 </resources>
