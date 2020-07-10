@@ -12,4 +12,6 @@
     <string name="explore">Explore</string>
     <string name="tab_text_one">For you</string>
     <string name="tab_text_two">News</string>
+    <string name="podcast_item_title">Podcast Title</string>
+    <string name="podcast_item_subtitle">Podcast Subtitle</string>
 </resources>
