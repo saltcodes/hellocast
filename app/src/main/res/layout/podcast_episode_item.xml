@@ -4,7 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingBottom="8dp">
+    android:paddingBottom="8dp"
+    android:background="@drawable/ripple_background"
+    android:clickable="true"
+    android:focusable="true">
 
     <View
         android:id="@+id/topDivider"
@@ -87,7 +90,7 @@
             app:chipIcon="@drawable/ic_play_circle"
             app:chipIconTint="@color/colorPrimary"
             app:chipStrokeWidth="1dp"
-            app:chipStrokeColor="@color/iconColor"
+            app:chipStrokeColor="@color/darkerGray"
             app:chipBackgroundColor="@android:color/transparent"/>
 
         <androidx.appcompat.widget.AppCompatImageButton

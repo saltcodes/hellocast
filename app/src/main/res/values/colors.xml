@@ -3,6 +3,6 @@
     <color name="colorPrimary">#673AB7</color>
     <color name="colorPrimaryDark">#320b86</color>
     <color name="colorAccent">#ffa5b0</color>
-    <color name="iconColor">@android:color/darker_gray</color>
+    <color name="darkerGray">@android:color/darker_gray</color>
     <color name="litWhite">#f1f1f1</color>
 </resources>
