@@ -14,4 +14,7 @@
     <string name="tab_text_two">News</string>
     <string name="podcast_item_title">Podcast Title</string>
     <string name="podcast_item_subtitle">Podcast Subtitle</string>
+    <string name="podcast_time">7 hours ago</string>
+    <string name="episode_duration">38 min</string>
+    <string name="episode_title">Episode Title</string>
 </resources>

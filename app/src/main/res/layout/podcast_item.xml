@@ -18,7 +18,9 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/podcastBanner"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:src="@drawable/test"
+                android:scaleType="fitXY"/>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/subscribeBtn"
@@ -26,7 +28,11 @@
                 android:layout_height="40dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_margin="8dp" />
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_plus"
+                app:fabCustomSize="40dp"
+                app:tint="@color/litWhite"
+                app:backgroundTint="@color/colorPrimary"/>
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 
