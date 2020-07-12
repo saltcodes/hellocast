@@ -17,4 +17,6 @@
     <string name="podcast_time">7 hours ago</string>
     <string name="episode_duration">38 min</string>
     <string name="episode_title">Episode Title</string>
+    <string name="progressTimer">0:00</string>
+    <string name="durationTimer">30:00</string>
 </resources>

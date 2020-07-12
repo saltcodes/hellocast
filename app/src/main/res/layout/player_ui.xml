@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_peekHeight="54dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:alpha="0.9"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            app:cardElevation="0dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/miniPodCastBanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/test" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/miniPodCastTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="0.1"
+            android:text="@string/title_place_holder"
+            android:textAppearance="@android:style/TextAppearance.Material.Body2" />
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/playPauseBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_play" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="260dp"
+            android:layout_height="260dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/podcastBanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/test" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/episodeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/episode_title"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/podcastTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/episode_title"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/backTenFab"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/ic_backwards"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:tint="@color/darkerGray" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/playPauseFab"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:src="@drawable/ic_play"
+                app:tint="@color/darkerGray"
+                app:borderWidth="0dp"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/forwardThirtyFab"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/ic_forward"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:tint="@color/darkerGray" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="272dp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/audioProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:thumbTint="@color/colorPrimary"
+                android:progressTint="@color/colorPrimary"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/progressTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/audioProgress"
+                android:layout_alignStart="@id/audioProgress"
+                android:layout_marginStart="12dp"
+                android:text="@string/progressTimer" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/durationTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/audioProgress"
+                android:layout_alignEnd="@id/audioProgress"
+                android:layout_marginEnd="12dp"
+                android:text="@string/durationTimer" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/episodeActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/addToPlayListBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_list" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/sleepBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_moon" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/infoBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/moreBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
