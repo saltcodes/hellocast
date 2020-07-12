@@ -4,17 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    tools:context=".ui.MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentHost"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bnv"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/navigation_graph" />
+        android:layout_above="@id/bnv">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentHost"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/navigation_graph" />
+
+
+        </RelativeLayout>
+
+        <include layout="@layout/player_ui" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -22,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/menu"
-        app:elevation="0dp"/>
+        app:elevation="0dp"
+        app:menu="@menu/menu" />
 
 </RelativeLayout>
