@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingBottom="8dp"
-    android:background="@drawable/ripple_background"
-    android:clickable="true"
-    android:focusable="true">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.episodedetails.EpisodeDetailsFragment"
+    android:orientation="vertical">
 
-    <View
-        android:id="@+id/topDivider"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/darker_gray" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/podcastBannerContainer"
@@ -65,15 +58,6 @@
         android:text="@string/episode_title"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/episodeDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:maxLines="2"
-        android:text="@string/hide_bottom_view_on_scroll_behavior" />
-
     <LinearLayout
         android:id="@+id/episodeActions"
         android:layout_width="match_parent"
@@ -110,5 +94,21 @@
             android:src="@drawable/ic_download_circle"
             android:tint="@color/colorPrimary"
             android:id="@+id/downloadBtn"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_share"
+            android:tint="@color/colorPrimary"
+            android:id="@+id/shareBtn"/>
     </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/episodeDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/hide_bottom_view_on_scroll_behavior" />
 </LinearLayout>
