@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/playerUI"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/curve_background"
     android:orientation="vertical"
-    app:layout_behavior="@string/bottom_sheet_behavior"
-    app:behavior_peekHeight="54dp"
-    android:background="@drawable/curve_background">
+    app:behavior_peekHeight="55dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
 
     <LinearLayout
+        android:id="@+id/miniPlayer"
         android:layout_width="match_parent"
         android:layout_height="54dp"
-        android:alpha="0.9"
         android:background="@color/litBackground"
         android:gravity="center_vertical"
         android:orientation="horizontal"
@@ -50,14 +51,25 @@
             android:src="@drawable/ic_play" />
     </LinearLayout>
 
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/miniPlayer"
+        android:progress="50"
+        android:progressTint="@color/colorPrimary"
+        android:background="@color/litBackground"
+        android:id="@+id/miniPlayerProgress"/>
 
     <LinearLayout
+        android:id="@+id/mainPlayerUI"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="70dp"
+        android:paddingBottom="56dp">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="260dp"
@@ -113,8 +125,8 @@
                 android:layout_margin="16dp"
                 android:backgroundTint="@color/colorPrimary"
                 android:src="@drawable/ic_play"
-                app:tint="@color/darkerGray"
-                app:borderWidth="0dp"/>
+                app:borderWidth="0dp"
+                app:tint="@color/darkerGray" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/forwardThirtyFab"
@@ -137,8 +149,8 @@
                 android:id="@+id/audioProgress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:thumbTint="@color/colorPrimary"
-                android:progressTint="@color/colorPrimary"/>
+                android:progressTint="@color/colorPrimary"
+                android:thumbTint="@color/colorPrimary" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/progressTimer"
@@ -189,14 +201,14 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_info"/>
+                android:src="@drawable/ic_info" />
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/moreBtn"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_more_horizontal"/>
+                android:src="@drawable/ic_more_horizontal" />
         </LinearLayout>
     </LinearLayout>
 
