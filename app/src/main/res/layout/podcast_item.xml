@@ -19,8 +19,8 @@
                 android:id="@+id/podcastBanner"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/test"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/test" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/subscribeBtn"
@@ -30,9 +30,9 @@
                 android:layout_alignParentBottom="true"
                 android:layout_margin="8dp"
                 android:src="@drawable/ic_plus"
+                app:backgroundTint="@color/background"
                 app:fabCustomSize="40dp"
-                app:tint="@color/litWhite"
-                app:backgroundTint="@color/colorPrimary"/>
+                app:tint="@color/colorPrimary" />
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 
