@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.genre.GenreFragment"
-    android:id="@+id/podcastList"
-    tools:listitem="@layout/podcast_item"
-    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-    app:spanCount="3"
-    android:paddingStart="8dp"
-    android:paddingEnd="8dp"
-    android:paddingTop="8dp"/>
+    android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popular_trending"
+        android:layout_margin="16dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/podcastList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/podcast_item"
+        android:paddingStart="8dp"
+        android:paddingEnd="0dp"
+        android:layout_marginBottom="44dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/currentEpisodeList"
+        tools:listitem="@layout/podcast_episode_item" />
+
+</LinearLayout>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="120dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:cardCornerRadius="8dp">
 
         <RelativeLayout
@@ -24,24 +24,24 @@
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/subscribeBtn"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_margin="8dp"
                 android:src="@drawable/ic_plus"
                 app:backgroundTint="@color/background"
-                app:fabCustomSize="40dp"
+                app:fabCustomSize="32dp"
                 app:tint="@color/colorPrimary" />
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/podcastTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/podcast_item_title"
+        android:textSize="16sp"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
 
@@ -49,8 +49,8 @@
         android:id="@+id/podcastAuthor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="@string/podcast_item_subtitle"
+        android:textSize="13sp"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
 
 </LinearLayout>

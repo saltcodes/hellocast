@@ -19,8 +19,8 @@
         android:paddingEnd="8dp">
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="38dp"
-            android:layout_height="38dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
             app:cardElevation="0dp">
 
             <androidx.appcompat.widget.AppCompatImageView
