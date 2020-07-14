@@ -39,22 +39,18 @@ class MainActivity : AppCompatActivity() {
                 when (newState) {
                     BottomSheetBehavior.STATE_DRAGGING -> {
                         binding.bnv.visibility = View.GONE
-
                     }
                     BottomSheetBehavior.STATE_COLLAPSED -> {
-                        binding.bnv.visibility = View.VISIBLE
                     }
                     BottomSheetBehavior.STATE_EXPANDED -> {
 
                     }
                     BottomSheetBehavior.STATE_HALF_EXPANDED -> {
-
                     }
                     BottomSheetBehavior.STATE_HIDDEN -> {
 
                     }
                     BottomSheetBehavior.STATE_SETTLING -> {
-
                     }
                 }
             }
