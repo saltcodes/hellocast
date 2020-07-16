@@ -1,38 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light"
     android:orientation="vertical"
     android:transitionName="pod_cast_transition"
     tools:context=".ui.podcastdetails.PodCastDetailsFragment">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/thumnail"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/placeholder_image" />
+        android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="SampleText"
-        android:textAppearance="@android:style/TextAppearance.Material.Body2"
-        android:textSize="18sp" />
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="true"
+            android:measureAllChildren="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/hide_bottom_view_on_scroll_behavior"
-        android:textAppearance="@android:style/TextAppearance.Material.Body1"
-        android:textSize="14sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/podcastTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/podcastBannerContainer"
+                        android:text="@string/podcast_item_title"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/podcastAuthor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/podcastTitle"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/podcast_item_subtitle"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/podcastBannerContainer"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="16dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/podcastBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/test" />
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/subscribe"
+                        app:chipBackgroundColor="@android:color/transparent"
+                        app:chipIcon="@drawable/ic_plus"
+                        app:chipIconTint="@color/colorPrimary"
+                        app:chipStrokeColor="@color/darkerGray"
+                        app:chipStrokeWidth="1dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/websiteBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_globe"
+                        android:tint="@color/colorPrimary" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/shareBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_share"
+                        android:tint="@color/colorPrimary" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:maxLines="5"
+                    android:text="@string/appbar_scrolling_view_behavior" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/darkerGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="0dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/episodeCount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text="@string/number_of_episodes"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/sortEpisodeBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_chevron_up" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/podcastEpisodeList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_podcast_episode" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </LinearLayout>

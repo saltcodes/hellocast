@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/podcast_item"
+        tools:listitem="@layout/item_podcast"
         android:paddingStart="8dp"
         android:paddingEnd="0dp"
         android:layout_marginBottom="44dp"/>
@@ -28,6 +28,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/currentEpisodeList"
-        tools:listitem="@layout/podcast_episode_item" />
+        tools:listitem="@layout/item_episode" />
 
 </LinearLayout>

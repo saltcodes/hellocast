@@ -20,4 +20,7 @@
     <string name="progressTimer">0:00</string>
     <string name="durationTimer">30:00</string>
     <string name="popular_trending">Popular And Trending</string>
+    <string name="time_elapsed">2 days ago</string>
+    <string name="number_of_episodes">128 Episodes</string>
+    <string name="subscribe">Subscribe</string>
 </resources>

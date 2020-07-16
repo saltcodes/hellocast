@@ -74,41 +74,5 @@
         android:maxLines="2"
         android:text="@string/hide_bottom_view_on_scroll_behavior" />
 
-    <LinearLayout
-        android:id="@+id/episodeActions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/mediaControlChip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:text="@string/episode_duration"
-            app:chipBackgroundColor="@android:color/transparent"
-            app:chipIcon="@drawable/ic_play_circle"
-            app:chipIconTint="@color/colorPrimary"
-            app:chipStrokeColor="@color/darkerGray"
-            app:chipStrokeWidth="1dp" />
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/addToPlayListBtn"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="48dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_list"
-            android:tint="@color/colorPrimary" />
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/downloadBtn"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="48dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_download_circle"
-            android:tint="@color/colorPrimary" />
-    </LinearLayout>
+    <include layout="@layout/ui_episode_controller"/>
 </LinearLayout>

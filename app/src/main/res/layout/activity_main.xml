@@ -29,7 +29,7 @@
 
         </RelativeLayout>
 
-        <include layout="@layout/player_ui" />
+        <include layout="@layout/ui_player" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
