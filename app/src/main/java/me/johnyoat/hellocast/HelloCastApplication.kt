@@ -1,4 +1,4 @@
-package me.johnyoat.hellocast.ui
+package me.johnyoat.hellocast
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
