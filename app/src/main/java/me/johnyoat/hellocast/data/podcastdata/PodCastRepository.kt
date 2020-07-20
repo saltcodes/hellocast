@@ -9,11 +9,11 @@ import retrofit2.Response
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
-class PodCastRepository @Inject constructor(private val listenNotesAPIService: ListenNotesAPIService) {
+class PodCastRepository {
+    private val listenNotesAPIService = ListenNotesAPIService.create()
 
-    fun getBestPodCast(): LiveData<List<PodCast>> {
-        val data = MutableLiveData<List<PodCast>>()
+    fun getBestPodCast(): LiveData<List<Podcast>> {
+        val data = MutableLiveData<List<Podcast>>()
 
         listenNotesAPIService.getBestPodCast().enqueue(object : Callback<PodCastResponse> {
             override fun onResponse(

@@ -6,6 +6,7 @@ import me.johnyoat.hellocast.utils.Constants.BASE_URL
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -31,6 +32,7 @@ public interface ListenNotesAPIService {
             return Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .client(client)
+                .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(ListenNotesAPIService::class.java)
         }

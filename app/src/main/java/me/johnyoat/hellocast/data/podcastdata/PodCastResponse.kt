@@ -1,16 +1,25 @@
 package me.johnyoat.hellocast.data.podcastdata
 
+import com.google.gson.annotations.SerializedName
+
+
 data class PodCastResponse(
-    val id : Int,
-    val name : String,
-    val parent_id : String,
-    val podcasts : List<PodCast>,
-    val total : Int,
-    val has_next : Boolean,
-    val has_previous : Boolean,
-    val page_number : Int,
-    val previous_page_number : Int,
-    val next_page_number : Int,
-    val listennotes_url : String
-) {
-}
+    @SerializedName("has_next")
+    val hasNext: Boolean,
+    @SerializedName("has_previous")
+    val hasPrevious: Boolean,
+    val id: Int,
+    @SerializedName("listennotes_url")
+    val listennotesUrl: String,
+    val name: String,
+    @SerializedName("next_page_number")
+    val nextPageNumber: Int,
+    @SerializedName("page_number")
+    val pageNumber: Int,
+    @SerializedName("parent_id")
+    val parentId: Any,
+    val podcasts: List<Podcast>,
+    @SerializedName("previous_page_number")
+    val previousPageNumber: Int,
+    val total: Int
+)

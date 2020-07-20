@@ -9,10 +9,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import com.google.android.material.transition.MaterialFadeThrough
 import dagger.hilt.android.AndroidEntryPoint
-import me.johnyoat.hellocast.data.podcastdata.PodCast
+import me.johnyoat.hellocast.data.podcastdata.Podcast
 import me.johnyoat.hellocast.databinding.FragmentLibraryBinding
 
-@AndroidEntryPoint
 class LibraryFragment : Fragment() {
     //Data Binding
     private var _binding: FragmentLibraryBinding? = null
@@ -34,7 +33,7 @@ class LibraryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.bestPodcasts.observe(viewLifecycleOwner) { podcasts ->
-            for (podCast:PodCast in podcasts){
+            for (podCast:Podcast in podcasts){
                 print(podCast.title)
             }
         }
