@@ -1,33 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.genre.GenreFragment"
-    android:orientation="vertical">
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/popular_trending"
-        android:layout_margin="16dp"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"/>
+    android:orientation="vertical"
+    tools:context=".ui.genre.GenreFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/podcastList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_podcast"
-        android:paddingStart="8dp"
-        android:paddingEnd="0dp"
-        android:layout_marginBottom="44dp"/>
-
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/currentEpisodeList"
-        tools:listitem="@layout/item_episode" />
+        android:isScrollContainer="true">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/popular_trending"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/podcastList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_podcast" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/currentEpisodeList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_episode" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
