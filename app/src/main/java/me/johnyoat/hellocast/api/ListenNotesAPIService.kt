@@ -2,6 +2,7 @@ package me.johnyoat.hellocast.api
 
 import me.johnyoat.hellocast.data.episodedata.Episode
 import me.johnyoat.hellocast.data.podcastdata.PodCastResponse
+import me.johnyoat.hellocast.data.podcastdata.PodcastCuratedResponse
 import me.johnyoat.hellocast.utils.Constants.BASE_URL
 import okhttp3.OkHttpClient
 import retrofit2.Call
@@ -16,6 +17,9 @@ public interface ListenNotesAPIService {
 
     @GET("episodes/{id}")
     fun getEpisode(@Path("id") episodeId:String) : Call<Episode>
+
+    @GET("")
+    fun getCuratedList(): Call<PodcastCuratedResponse>
 
     companion object {
         fun create(): ListenNotesAPIService {
