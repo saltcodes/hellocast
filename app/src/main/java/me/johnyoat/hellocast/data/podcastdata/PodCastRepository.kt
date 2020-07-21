@@ -26,4 +26,24 @@ class PodCastRepository {
         return data
     }
 
+    fun getCuratedPodcastList(): MutableLiveData<List<PodcastCuratedList>> {
+        val data = MutableLiveData<List<PodcastCuratedList>>()
+
+        listenNotesAPIService.getCuratedList().enqueue(object : Callback<PodcastCuratedResponse>{
+
+            override fun onResponse(
+                call: Call<PodcastCuratedResponse>,
+                response: Response<PodcastCuratedResponse>
+            ) {
+                data.value = response.body()?.curatedLists
+            }
+
+            override fun onFailure(call: Call<PodcastCuratedResponse>, t: Throwable) {
+
+            }
+        })
+
+        return data
+    }
+
 }

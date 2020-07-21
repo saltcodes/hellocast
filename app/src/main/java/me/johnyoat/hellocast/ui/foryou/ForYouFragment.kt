@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import com.google.android.material.transition.MaterialContainerTransform
+import me.johnyoat.hellocast.data.podcastdata.PodcastCuratedList
 import me.johnyoat.hellocast.databinding.ForYouFragmentBinding
 
 class ForYouFragment : Fragment() {
@@ -31,7 +33,13 @@ class ForYouFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        viewModel.curatedList.observe(viewLifecycleOwner) { curatedList ->
+            run {
+                for (cl: PodcastCuratedList in curatedList) {
+                    print(cl.title)
+                }
+            }
+        }
     }
 
 

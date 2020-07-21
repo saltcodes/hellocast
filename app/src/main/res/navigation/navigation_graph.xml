@@ -31,6 +31,11 @@
         android:name="me.johnyoat.hellocast.ui.podcastdetails.PodCastDetailsFragment"
         android:label="fragment_pod_cast_details"
         tools:layout="@layout/fragment_pod_cast_details" />
+    <fragment
+        android:id="@+id/forYouFragment"
+        android:name="me.johnyoat.hellocast.ui.foryou.ForYouFragment"
+        android:label="for_you_fragment"
+        tools:layout="@layout/for_you_fragment" />
 
 
 </navigation>

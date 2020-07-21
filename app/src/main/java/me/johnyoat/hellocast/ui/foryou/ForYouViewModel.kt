@@ -5,4 +5,5 @@ import me.johnyoat.hellocast.data.podcastdata.PodCastRepository
 
 class ForYouViewModel : ViewModel() {
     private val podCastRepository = PodCastRepository()
+    val curatedList = podCastRepository.getCuratedPodcastList()
 }
