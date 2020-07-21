@@ -35,16 +35,17 @@
                         android:layout_height="wrap_content"
                         android:layout_toStartOf="@id/podcastBannerContainer"
                         android:text="@string/podcast_item_title"
-                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/podcastAuthor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/podcastTitle"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="4dp"
                         android:text="@string/podcast_item_subtitle"
-                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/podcastBannerContainer"
@@ -102,6 +103,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:maxLines="5"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                     android:text="@string/appbar_scrolling_view_behavior" />
 
                 <View
@@ -123,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.1"
                         android:text="@string/number_of_episodes"
-                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
                     <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/sortEpisodeBtn"

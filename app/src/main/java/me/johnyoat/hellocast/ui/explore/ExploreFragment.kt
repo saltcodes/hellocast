@@ -9,11 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import com.google.android.material.transition.MaterialFadeThrough
-import me.johnyoat.hellocast.databinding.ForYouFragmentBinding
+import me.johnyoat.hellocast.databinding.FragmentExploreBinding
 
 class ExploreFragment : Fragment() {
 
-    private var _binding: ForYouFragmentBinding? = null
+    private var _binding: FragmentExploreBinding? = null
 
     private val binding get() = _binding!!
     private val viewModel: ExploreViewModel by viewModels()
@@ -28,7 +28,7 @@ class ExploreFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = ForYouFragmentBinding.inflate(inflater, container, false)
+        _binding = FragmentExploreBinding.inflate(inflater, container, false)
         return binding.root
     }
 

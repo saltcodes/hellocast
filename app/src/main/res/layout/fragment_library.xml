@@ -16,54 +16,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="@string/explore"
+            android:text="@string/my_library"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        style="@style/Widget.AppCompat.SearchView"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/curve_border_background"
-        android:drawableStart="@drawable/ic_search"
-        android:drawablePadding="8dp"
-        android:gravity="start|center_vertical"
-        android:paddingStart="16dp"
-        android:paddingEnd="8dp"
-        android:text="@string/search"
-        app:drawableTint="@android:color/darker_gray"
-        />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/genreTabLayout"
+    <LinearLayout
+        android:id="@+id/emptySubscriptionBanner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabTextAppearance="@android:style/TextAppearance.Material.Body1"
-        app:tabIndicator="@drawable/genre_indicator"
-        app:tabIndicatorFullWidth="false">
+        android:layout_height="300dp"
+        android:layout_margin="32dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <com.google.android.material.tabs.TabItem
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_podcast_img_two" />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tab_text_one" />
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/podcast_title"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
-        <com.google.android.material.tabs.TabItem
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tab_text_two" />
+            android:gravity="center"
+            android:text="@string/podcast_subtitle"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nav_app_bar_navigate_up_description" />
-
-    </com.google.android.material.tabs.TabLayout>
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/genreViewPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    </LinearLayout>
 
 </LinearLayout>

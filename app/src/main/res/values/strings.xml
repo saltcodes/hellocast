@@ -23,4 +23,5 @@
     <string name="time_elapsed">2 days ago</string>
     <string name="number_of_episodes">128 Episodes</string>
     <string name="subscribe">Subscribe</string>
+    <string name="my_library">My Library</string>
 </resources>

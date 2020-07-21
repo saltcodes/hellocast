@@ -3,23 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/exploreFragment">
 
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="me.johnyoat.hellocast.ui.home.HomeFragment"
-        android:label="Home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_podCastDetailsFragment"
-            app:destination="@id/podCastDetailsFragment" />
-    </fragment>
 
     <fragment
         android:id="@+id/libraryFragment"
         android:name="me.johnyoat.hellocast.ui.library.LibraryFragment"
         android:label="Search"
-        tools:layout="@layout/fragment_library"/>
+        tools:layout="@layout/fragment_library">
+        <action
+            android:id="@+id/action_libraryFragment_to_exploreFragment"
+            app:destination="@id/exploreFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/profileFragment"
@@ -32,10 +27,18 @@
         android:label="fragment_pod_cast_details"
         tools:layout="@layout/fragment_pod_cast_details" />
     <fragment
-        android:id="@+id/forYouFragment"
+
+        android:id="@+id/exploreFragment"
         android:name="me.johnyoat.hellocast.ui.explore.ExploreFragment"
-        android:label="for_you_fragment"
-        tools:layout="@layout/for_you_fragment" />
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore">
+        <action
+            android:id="@+id/action_exploreFragment_to_podCastDetailsFragment"
+            app:destination="@id/podCastDetailsFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 
 
 </navigation>
