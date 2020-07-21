@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <include layout="@layout/item_for_you"/>
+            <include layout="@layout/item_podcast_group"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/currentEpisodeList"

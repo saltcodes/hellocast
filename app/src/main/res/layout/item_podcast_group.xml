@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="@string/popular_trending"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textSize="16sp"
+        android:textStyle="bold"
         android:id="@+id/podcastGroupTitle"/>
 
     <androidx.recyclerview.widget.RecyclerView

@@ -33,7 +33,7 @@
         tools:layout="@layout/fragment_pod_cast_details" />
     <fragment
         android:id="@+id/forYouFragment"
-        android:name="me.johnyoat.hellocast.ui.foryou.ForYouFragment"
+        android:name="me.johnyoat.hellocast.ui.explore.ExploreFragment"
         android:label="for_you_fragment"
         tools:layout="@layout/for_you_fragment" />
 
