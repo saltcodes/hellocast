@@ -27,16 +27,16 @@ class ExplorePodcastCuratedAdapter(
     }
 
     override fun onBindViewHolder(holder: ExplorePodcastCuratedViewHolder, position: Int) {
-        holder.setData(curatedLists[position])
+        holder.setData(curatedLists[position],position)
     }
 
 
     inner class ExplorePodcastCuratedViewHolder(binding: ItemPodcastGroupBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun setData(curatedItem: PodcastCuratedList) {
+        fun setData(curatedItem: PodcastCuratedList,position: Int) {
             binding.podcastGroupTitle.text = curatedItem.title
             binding.podcastList.apply {
-                adapter = PodcastAdapter(curatedItem.podcasts,activity)
+                adapter = PodcastAdapter(curatedItem.podcasts,activity,position)
                 setRecycledViewPool(recycledViewPool)
                 setHasFixedSize(true)
             }

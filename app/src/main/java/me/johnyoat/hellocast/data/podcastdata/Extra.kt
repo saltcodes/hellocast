@@ -1,7 +1,10 @@
 package me.johnyoat.hellocast.data.podcastdata
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Extra(
     @SerializedName("twitter_handle") val twitterHandle: String,
     @SerializedName("facebook_handle") val facebookHandle: String,
@@ -15,4 +18,4 @@ data class Extra(
     @SerializedName("url1") val url1: String,
     @SerializedName("url2") val url2: String,
     @SerializedName("url3") val url3: String
-)
+) : Parcelable

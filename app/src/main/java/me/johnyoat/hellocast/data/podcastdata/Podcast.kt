@@ -1,8 +1,11 @@
 package me.johnyoat.hellocast.data.podcastdata
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 
+@Parcelize
 data class Podcast(
     val country: String,
     val description: String,
@@ -34,4 +37,4 @@ data class Podcast(
     val totalEpisodes: Int,
     val type: String,
     val website: String
-)
+) : Parcelable

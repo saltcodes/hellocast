@@ -30,7 +30,9 @@ class PodCastDetailsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentPodCastDetailsBinding.inflate(inflater, container, false)
-        return binding.root
+        val view = binding.root
+        view.transitionName = arguments?.getString("transitionName")
+        return view
     }
 
 
