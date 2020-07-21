@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isGone
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -40,9 +41,12 @@ class MainActivity : AppCompatActivity() {
             override fun onStateChanged(bottomSheet: View, newState: Int) {
                 when (newState) {
                     BottomSheetBehavior.STATE_DRAGGING -> {
-                        binding.bnv.visibility = View.GONE
+                        binding.bnv.isGone = true
+                        binding.root.miniPlayerProgress.isGone = true
                     }
                     BottomSheetBehavior.STATE_COLLAPSED -> {
+                        binding.bnv.isGone = false
+                        binding.root.miniPlayerProgress.isGone = false
                     }
                     BottomSheetBehavior.STATE_EXPANDED -> {
 
