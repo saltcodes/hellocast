@@ -39,7 +39,7 @@ class PodCastRepository {
             }
 
             override fun onFailure(call: Call<PodcastCuratedResponse>, t: Throwable) {
-
+                println("----------------------${t.message}--------------------------------")
             }
         })
 

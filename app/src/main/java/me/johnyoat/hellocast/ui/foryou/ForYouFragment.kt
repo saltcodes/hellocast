@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import com.google.android.material.transition.MaterialContainerTransform
+import com.google.android.material.transition.MaterialFadeThrough
 import me.johnyoat.hellocast.data.podcastdata.PodcastCuratedList
 import me.johnyoat.hellocast.databinding.ForYouFragmentBinding
 
@@ -18,9 +19,10 @@ class ForYouFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewModel: ForYouViewModel by viewModels()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enterTransition = MaterialContainerTransform()
+        enterTransition = MaterialFadeThrough ()
     }
 
     override fun onCreateView(
@@ -34,13 +36,14 @@ class ForYouFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.curatedList.observe(viewLifecycleOwner) { curatedList ->
-            run {
                 for (cl: PodcastCuratedList in curatedList) {
-                    print(cl.title)
+                    println(cl.title)
                 }
-            }
         }
     }
 
-
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }

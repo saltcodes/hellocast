@@ -8,7 +8,7 @@ data class PodcastCuratedList(
     @SerializedName("podcasts") val podcasts: List<Podcast>,
     @SerializedName("source_url") val sourceUrl: String,
     @SerializedName("description") val description: String,
-    @SerializedName("pub_date_ms") val pubDate: Int,
+    @SerializedName("pub_date_ms") val pubDate: Long,
     @SerializedName("source_domain") val sourceDomain: String,
     @SerializedName("listennotes_url") val listenNotesUrl: String
 )

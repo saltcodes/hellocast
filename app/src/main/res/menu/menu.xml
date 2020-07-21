@@ -6,6 +6,11 @@
         android:icon="@drawable/ic_home"/>
 
     <item
+        android:id="@+id/forYouFragment"
+        android:title="@string/explore"
+        android:icon="@drawable/ic_compass"/>
+
+    <item
         android:id="@+id/libraryFragment"
         android:title="@string/library"
         android:icon="@drawable/ic_headphones"/>

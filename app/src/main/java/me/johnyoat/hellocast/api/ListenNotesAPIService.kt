@@ -18,7 +18,7 @@ public interface ListenNotesAPIService {
     @GET("episodes/{id}")
     fun getEpisode(@Path("id") episodeId:String) : Call<Episode>
 
-    @GET("")
+    @GET("curated_podcasts")
     fun getCuratedList(): Call<PodcastCuratedResponse>
 
     companion object {
