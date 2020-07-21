@@ -18,9 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
         android:text="@string/podcast_item_title"
-        android:textStyle="bold"
         android:id="@+id/podcastTitle"/>
 
     <include layout="@layout/ui_episode_controller" />

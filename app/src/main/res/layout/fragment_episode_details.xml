@@ -35,8 +35,7 @@
             android:layout_marginStart="8dp"
             android:layout_toEndOf="@id/podcastBannerContainer"
             android:text="@string/podcast_item_title"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
-            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
             android:layout_marginTop="5dp"/>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -56,7 +55,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/episode_title"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
     <LinearLayout
         android:id="@+id/episodeActions"
