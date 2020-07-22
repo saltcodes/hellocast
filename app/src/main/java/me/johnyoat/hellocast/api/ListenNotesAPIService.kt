@@ -2,6 +2,7 @@ package me.johnyoat.hellocast.api
 
 import me.johnyoat.hellocast.data.episodedata.Episode
 import me.johnyoat.hellocast.data.podcastdata.PodCastResponse
+import me.johnyoat.hellocast.data.podcastdata.Podcast
 import me.johnyoat.hellocast.data.podcastdata.PodcastCuratedResponse
 import me.johnyoat.hellocast.utils.Constants.BASE_URL
 import okhttp3.OkHttpClient
@@ -20,6 +21,10 @@ public interface ListenNotesAPIService {
 
     @GET("curated_podcasts")
     fun getCuratedList(): Call<PodcastCuratedResponse>
+
+    @GET("podcast/{id}")
+    fun getPodcast(@Path("id") podcastId:String): Call<Podcast>
+
 
     companion object {
         fun create(): ListenNotesAPIService {
