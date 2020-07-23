@@ -24,7 +24,7 @@ public interface ListenNotesAPIService {
     @GET("curated_podcasts")
     fun getCuratedList(): Call<PodcastCuratedResponse>
 
-    @GET("podcast/{id}")
+    @GET("podcasts/{id}")
     fun getPodcast(@Path("id") podcastId: String): Call<Podcast>
 
     @GET("genres?top_level_only=1")

@@ -39,8 +39,24 @@ class PodCastRepository {
             }
 
             override fun onFailure(call: Call<PodcastCuratedResponse>, t: Throwable) {
-                println("----------------------${t.message}--------------------------------")
             }
+        })
+
+        return data
+    }
+
+    fun getPodCast(podcastId:String): LiveData<Podcast>{
+        val data = MutableLiveData<Podcast>()
+
+        listenNotesAPIService.getPodcast(podcastId).enqueue(object : Callback<Podcast>{
+            override fun onFailure(call: Call<Podcast>, t: Throwable) {
+
+            }
+
+            override fun onResponse(call: Call<Podcast>, response: Response<Podcast>) {
+                data.value = response.body()
+            }
+
         })
 
         return data

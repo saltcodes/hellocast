@@ -98,12 +98,13 @@
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/podcastDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:maxLines="5"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                    android:text="@string/appbar_scrolling_view_behavior" />
+                    android:text="@string/loading_description" />
 
                 <View
                     android:layout_width="match_parent"

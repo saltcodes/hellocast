@@ -38,6 +38,7 @@ class ExploreFragment : Fragment() {
                 binding.curatedList.apply {
                     adapter = ExplorePodcastCuratedAdapter(curatedList,activity as AppCompatActivity)
                     setHasFixedSize(true)
+                    isNestedScrollingEnabled = false
                 }
         }
     }

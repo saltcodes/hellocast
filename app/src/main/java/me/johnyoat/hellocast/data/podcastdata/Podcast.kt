@@ -9,7 +9,7 @@ import me.johnyoat.hellocast.data.episodedata.Episode
 @Parcelize
 data class Podcast(
     val country: String,
-    val description: String,
+    val description: String = "",
     @SerializedName("earliest_pub_date_ms")
     val earliestPubDate: Long,
     val email: String,
