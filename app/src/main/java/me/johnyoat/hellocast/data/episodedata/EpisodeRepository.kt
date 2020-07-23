@@ -8,7 +8,8 @@ import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
-class EpisodeRepository @Inject constructor(private val listenNotesAPIService: ListenNotesAPIService) {
+class EpisodeRepository () {
+    private val listenNotesAPIService = ListenNotesAPIService.create()
 
     fun getEpisode(episodeId: String): LiveData<Episode>{
         val data = MutableLiveData<Episode>()
