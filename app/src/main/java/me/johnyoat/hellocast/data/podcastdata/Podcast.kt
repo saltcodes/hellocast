@@ -38,5 +38,5 @@ data class Podcast(
     val totalEpisodes: Int,
     val type: String,
     val website: String,
-    val episdoes: List<Episode>
+    val episodes: List<Episode>
 ) : Parcelable

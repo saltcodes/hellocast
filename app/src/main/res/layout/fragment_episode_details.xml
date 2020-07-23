@@ -7,6 +7,7 @@
     tools:context=".ui.episodedetails.EpisodeDetailsFragment"
     android:orientation="vertical">
 
+    <include layout="@layout/toolbar_layout"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -36,7 +37,8 @@
             android:layout_toEndOf="@id/podcastBannerContainer"
             android:text="@string/podcast_item_title"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimary"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/podcastTime"
@@ -109,5 +111,5 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/hide_bottom_view_on_scroll_behavior" />
+        android:text="@string/loading_description" />
 </LinearLayout>

@@ -3,6 +3,7 @@ package me.johnyoat.hellocast.data.episodedata
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
+import me.johnyoat.hellocast.data.podcastdata.Podcast
 
 @Parcelize
 data class Episode(
@@ -20,7 +21,7 @@ data class Episode(
     @SerializedName("listennotes_url")
     val listennotesUrl: String,
     @SerializedName("maybe_audio_invalid")
-    val isMaybeAudioInvalid: Boolean ,
+    val isMaybeAudioInvalid: Boolean,
     @SerializedName("pub_date_ms")
     val pubDate: Long,
     val thumbnail: String,

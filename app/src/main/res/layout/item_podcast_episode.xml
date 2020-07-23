@@ -23,7 +23,7 @@
         android:layout_marginStart="16dp"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
         android:text="@string/podcast_item_title"
-        android:id="@+id/podcastTitle"/>
+        android:id="@+id/episodeTitle"/>
 
     <include layout="@layout/ui_episode_controller" />
 
