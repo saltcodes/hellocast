@@ -11,6 +11,8 @@ import androidx.lifecycle.observe
 import com.bumptech.glide.Glide
 import com.google.android.material.transition.MaterialSharedAxis
 import kotlinx.android.synthetic.main.fragment_episode_details.view.*
+import kotlinx.android.synthetic.main.fragment_pod_cast_details.view.*
+import kotlinx.android.synthetic.main.toolbar_layout.view.*
 import me.johnyoat.hellocast.data.episodedata.Episode
 import me.johnyoat.hellocast.databinding.FragmentEpisodeDetailsBinding
 
@@ -42,6 +44,8 @@ class EpisodeDetailsFragment : Fragment() {
         val podCastTitle = requireArguments().getString("podcastTitle")
         val podCastThumbnail = requireArguments().getString("podCastThumbnail")
         setEpisode(episode,podCastThumbnail,podCastTitle)
+
+        binding.root.toolbarTitle.text = "Episode"
 
         viewModel.getEpisode(episode.id)
             .observe(viewLifecycleOwner) { episodeData ->

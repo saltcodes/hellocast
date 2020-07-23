@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#673AB7</color>
-    <color name="colorPrimaryDark">#320b86</color>
+    <color name="colorPrimary">#6c63ff</color>
+    <color name="colorPrimaryDark">#6c63ff</color>
     <color name="colorAccent">#ffa5b0</color>
     <color name="darkerGray">@android:color/darker_gray</color>
     <color name="litBackground">#E6F1F1F1</color>

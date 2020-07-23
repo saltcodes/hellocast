@@ -34,7 +34,9 @@ class ExploreFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.exploreRefreshLayout.isRefreshing = true
         viewModel.curatedList.observe(viewLifecycleOwner) { curatedList ->
+            binding.exploreRefreshLayout.isRefreshing = false
                 binding.curatedList.apply {
                     adapter = ExplorePodcastCuratedAdapter(curatedList,activity as AppCompatActivity)
                     setHasFixedSize(true)

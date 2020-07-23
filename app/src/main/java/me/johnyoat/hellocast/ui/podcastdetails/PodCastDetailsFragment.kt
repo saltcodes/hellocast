@@ -31,6 +31,7 @@ class PodCastDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.episodeRefreshLayout.isRefreshing = true
         val podcast = requireArguments().getParcelable<Podcast>("podcast")
         setUpPodCastDetails(podcast)
 
@@ -63,6 +64,7 @@ class PodCastDetailsFragment : Fragment() {
         }
 
         if (podcast?.episodes != null){
+            binding.episodeRefreshLayout.isRefreshing = false
             binding.podcastEpisodeList.apply {
                 adapter = PodCastDetailsEpisodeListAdapter(podcast.episodes,activity as AppCompatActivity,podcast.title,podcast.thumbnail)
             }

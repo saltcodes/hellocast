@@ -11,7 +11,8 @@
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/episodeRefreshLayout">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
