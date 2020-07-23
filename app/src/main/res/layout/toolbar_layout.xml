@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_arrow_left"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/toolbarTitle"
+        tools:ignore="RelativeOverlap" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_more_horizontal"
+        android:rotation="90"
+        android:id="@+id/moreBtn"/>
+
+</RelativeLayout>
