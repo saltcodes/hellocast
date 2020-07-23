@@ -6,7 +6,6 @@ import me.johnyoat.hellocast.api.ListenNotesAPIService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import javax.inject.Inject
 
 class EpisodeRepository () {
     private val listenNotesAPIService = ListenNotesAPIService.create()
