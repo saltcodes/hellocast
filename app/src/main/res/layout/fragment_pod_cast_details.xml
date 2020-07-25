@@ -37,7 +37,8 @@
                         android:layout_height="wrap_content"
                         android:layout_toStartOf="@id/podcastBannerContainer"
                         android:text="@string/podcast_item_title"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textSize="24sp"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/podcastAuthor"
@@ -117,7 +118,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="22dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center_vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="0dp">
@@ -128,7 +129,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.1"
                         android:text="@string/number_of_episodes"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                        android:textSize="18sp"/>
 
                     <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/sortEpisodeBtn"
