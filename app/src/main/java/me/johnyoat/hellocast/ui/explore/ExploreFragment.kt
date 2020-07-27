@@ -1,5 +1,6 @@
 package me.johnyoat.hellocast.ui.explore
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import com.google.android.material.transition.MaterialFadeThrough
 import me.johnyoat.hellocast.databinding.FragmentExploreBinding
+import me.johnyoat.hellocast.ui.search.SearchActivity
 
 class ExploreFragment : Fragment() {
 
@@ -42,6 +44,10 @@ class ExploreFragment : Fragment() {
                     setHasFixedSize(true)
                     isNestedScrollingEnabled = false
                 }
+        }
+
+        binding.searchBtn.setOnClickListener {
+            requireActivity().startActivity(Intent(requireActivity(),SearchActivity::class.java))
         }
     }
 

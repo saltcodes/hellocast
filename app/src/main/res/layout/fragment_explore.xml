@@ -35,7 +35,8 @@
         android:paddingStart="16dp"
         android:paddingEnd="8dp"
         android:text="@string/search"
-        app:drawableTint="@android:color/darker_gray" />
+        app:drawableTint="@android:color/darker_gray"
+        android:id="@+id/searchBtn"/>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/exploreRefreshLayout"
