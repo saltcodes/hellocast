@@ -25,4 +25,5 @@
     <string name="subscribe">Subscribe</string>
     <string name="my_library">My Library</string>
     <string name="loading_description">Loading Description...</string>
+    <string name="search_podcasts">Search Podcasts</string>
 </resources>
