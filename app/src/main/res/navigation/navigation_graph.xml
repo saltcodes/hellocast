@@ -16,6 +16,8 @@
             app:destination="@id/exploreFragment" />
     </fragment>
 
+
+
     <fragment
         android:id="@+id/profileFragment"
         android:name="me.johnyoat.hellocast.ui.profile.ProfileFragment"
@@ -30,6 +32,8 @@
             android:id="@+id/action_podCastDetailsFragment_to_episodeDetailsFragment"
             app:destination="@id/episodeDetailsFragment" />
     </fragment>
+
+
     <fragment
 
         android:id="@+id/exploreFragment"
@@ -43,6 +47,8 @@
             android:id="@+id/action_exploreFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
+
+
     <fragment
         android:id="@+id/episodeDetailsFragment"
         android:name="me.johnyoat.hellocast.ui.episodedetails.EpisodeDetailsFragment"
