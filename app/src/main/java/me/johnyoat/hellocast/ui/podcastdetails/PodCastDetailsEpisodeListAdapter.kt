@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import me.johnyoat.hellocast.R
 import me.johnyoat.hellocast.data.episodedata.Episode
 import me.johnyoat.hellocast.databinding.ItemPodcastEpisodeBinding
+import me.johnyoat.hellocast.ext.toDateString
 
 
 class PodCastDetailsEpisodeListAdapter(
@@ -53,6 +54,7 @@ class PodCastDetailsEpisodeListAdapter(
 
         fun setData(episode: Episode) {
             binding.episodeTitle.text = episode.title
+            binding.date.text = episode.pubDate.toDateString()
         }
     }
 }

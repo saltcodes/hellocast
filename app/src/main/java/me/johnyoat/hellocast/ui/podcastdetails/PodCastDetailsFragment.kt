@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.observe
 import com.bumptech.glide.Glide
 import com.google.android.material.transition.MaterialSharedAxis
 import me.johnyoat.hellocast.data.podcastdata.Podcast
@@ -32,10 +31,10 @@ class PodCastDetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.episodeRefreshLayout.isRefreshing = true
-        val podcast = requireArguments().getParcelable<Podcast>("podcast")
-        setUpPodCastDetails(podcast)
+        val podcastID = requireArguments().getString("podcast")
 
-        viewModel.getPodcast(podcast!!.id)
+
+        viewModel.getPodcast(podcastID!!)
             .observe(viewLifecycleOwner) { podcastData -> setUpPodCastDetails(podcastData) }
 
     }
@@ -43,7 +42,7 @@ class PodCastDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentPodCastDetailsBinding.inflate(inflater, container, false)
         return binding.root
@@ -65,9 +64,10 @@ class PodCastDetailsFragment : Fragment() {
         if (podcast?.episodes != null){
             binding.episodeRefreshLayout.isRefreshing = false
             binding.podcastEpisodeList.apply {
-                adapter = PodCastDetailsEpisodeListAdapter(podcast.episodes,activity as AppCompatActivity,podcast.title,podcast.thumbnail)
+                adapter = PodCastDetailsEpisodeListAdapter(podcast.episodes,activity as AppCompatActivity,podcast.title!!,podcast.thumbnail!!)
             }
         }
+        binding.episodeRefreshLayout.isRefreshing = false
     }
 
     override fun onDestroy() {

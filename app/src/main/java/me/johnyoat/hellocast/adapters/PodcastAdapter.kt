@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import me.johnyoat.hellocast.R
@@ -30,11 +29,8 @@ class PodcastAdapter(private val podcasts: List<Podcast>, private val activity: 
         holder.setData(podcasts[position])
         holder.itemView.transitionName = "podcast${position}${index}"
         holder.itemView.setOnClickListener{
-//            val extras = FragmentNavigatorExtras(it to it.transitionName)
-            val bundle = bundleOf("podcast" to podcasts[position])
-//            bundle.putString("transitionName",it.transitionName)
-            activity.findNavController(R.id.fragmentHost)
-                .navigate(R.id.podCastDetailsFragment, bundle, null, null)
+            val bundle = bundleOf("podcast" to podcasts[position].id)
+            activity.findNavController(R.id.fragmentHost).navigate(R.id.podCastDetailsFragment, bundle, null, null)
 
         }
     }

@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.observe
 import com.google.android.material.transition.MaterialFadeThrough
 import me.johnyoat.hellocast.databinding.FragmentExploreBinding
 import me.johnyoat.hellocast.ui.search.SearchActivity

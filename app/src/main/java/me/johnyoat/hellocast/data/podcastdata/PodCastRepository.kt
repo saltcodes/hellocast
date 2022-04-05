@@ -1,5 +1,6 @@
 package me.johnyoat.hellocast.data.podcastdata
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import me.johnyoat.hellocast.api.ListenNotesAPIService
@@ -39,6 +40,7 @@ class PodCastRepository {
             }
 
             override fun onFailure(call: Call<PodcastCuratedResponse>, t: Throwable) {
+                Log.d("error",t.localizedMessage!!)
             }
         })
 

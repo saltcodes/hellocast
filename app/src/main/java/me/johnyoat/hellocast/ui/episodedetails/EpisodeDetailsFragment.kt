@@ -7,14 +7,13 @@ import android.view.ViewGroup
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.observe
 import com.bumptech.glide.Glide
 import com.google.android.material.transition.MaterialSharedAxis
 import kotlinx.android.synthetic.main.fragment_episode_details.view.*
-import kotlinx.android.synthetic.main.fragment_pod_cast_details.view.*
 import kotlinx.android.synthetic.main.toolbar_layout.view.*
 import me.johnyoat.hellocast.data.episodedata.Episode
 import me.johnyoat.hellocast.databinding.FragmentEpisodeDetailsBinding
+import me.johnyoat.hellocast.ext.toDateString
 
 
 class EpisodeDetailsFragment : Fragment() {
@@ -67,7 +66,7 @@ class EpisodeDetailsFragment : Fragment() {
             binding.episodeDescription.text =
                 HtmlCompat.fromHtml(description, HtmlCompat.FROM_HTML_MODE_COMPACT)
         }
-        binding.podcastTime.podcastTime.text = episode?.pubDate.toString()
+        binding.podcastTime.podcastTime.text = episode?.pubDate?.toDateString()
     }
 
 }

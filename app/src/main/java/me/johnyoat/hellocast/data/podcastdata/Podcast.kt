@@ -8,35 +8,35 @@ import me.johnyoat.hellocast.data.episodedata.Episode
 
 @Parcelize
 data class Podcast(
-    val country: String,
-    val description: String = "",
+    var country: String? = "",
+    var description: String? = "",
     @SerializedName("earliest_pub_date_ms")
-    val earliestPubDate: Long,
-    val email: String,
+    var earliestPubDate: Long?,
+    var email: String? = "",
     @SerializedName("explicit_content")
-    val explicitContent: Boolean,
-    val extra: Extra,
-    val genre_ids: List<Int>,
-    val id: String,
-    val image: String,
+    var explicitContent: Boolean?,
+    var extra: Extra?,
+    var genre_ids: List<Int>?,
+    var id: String? = "",
+    var image: String? = "",
     @SerializedName("is_claimed")
-    val isClaimed: Boolean,
+    var isClaimed: Boolean?,
     @SerializedName("itunes_id")
-    val itunesId: Int,
-    val language: String,
+    var itunesId: Int? = 0,
+    var language: String? = "",
     @SerializedName("latest_pub_date_ms")
-    val latestPubDate: Long,
+    var latestPubDate: Long? = 0L,
     @SerializedName("listennotes_url")
-    val listennotesUrl: String,
+    var listennotesUrl: String? = "",
     @SerializedName("looking_for")
-    val lookingFor: LookingFor,
-    val publisher: String,
-    val rss: String,
-    val thumbnail: String,
-    val title: String,
+    var lookingFor: LookingFor?,
+    var publisher: String? = "",
+    var rss: String = "",
+    var thumbnail: String? = "",
+    var title: String? = "",
     @SerializedName("total_episodes")
-    val totalEpisodes: Int,
-    val type: String,
-    val website: String,
-    val episodes: List<Episode>
+    var totalEpisodes: Int = 0,
+    var type: String? = "",
+    var website: String? = "",
+    var episodes: List<Episode>,
 ) : Parcelable
