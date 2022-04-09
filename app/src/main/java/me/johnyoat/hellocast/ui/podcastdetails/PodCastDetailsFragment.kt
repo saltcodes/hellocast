@@ -11,8 +11,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.google.android.material.transition.MaterialSharedAxis
+import kotlinx.android.synthetic.main.toolbar_layout.view.*
 import me.johnyoat.hellocast.data.podcastdata.Podcast
 import me.johnyoat.hellocast.databinding.FragmentPodCastDetailsBinding
+import me.johnyoat.hellocast.ext.popBackStack
 
 
 class PodCastDetailsFragment : Fragment() {
@@ -29,6 +31,11 @@ class PodCastDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+        binding.root.backBtn.setOnClickListener {
+            popBackStack()
+        }
 
         binding.episodeRefreshLayout.isRefreshing = true
         val podcastID = requireArguments().getString("podcast")

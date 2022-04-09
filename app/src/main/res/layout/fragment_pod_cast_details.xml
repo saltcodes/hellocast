@@ -145,7 +145,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/item_podcast_episode" />
+                    tools:listitem="@layout/item_podcast_episode"
+                    android:paddingBottom="54dp"/>
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>

@@ -10,6 +10,7 @@ import me.johnyoat.hellocast.R
 import me.johnyoat.hellocast.data.episodedata.Episode
 import me.johnyoat.hellocast.databinding.ItemPodcastEpisodeBinding
 import me.johnyoat.hellocast.ext.toDateString
+import me.johnyoat.hellocast.ext.toDuration
 
 
 class PodCastDetailsEpisodeListAdapter(
@@ -49,12 +50,16 @@ class PodCastDetailsEpisodeListAdapter(
         }
     }
 
+
+
+
     inner class PodCastDetailsEpisodeViewHolder(binding: ItemPodcastEpisodeBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun setData(episode: Episode) {
             binding.episodeTitle.text = episode.title
             binding.date.text = episode.pubDate.toDateString()
+            binding.mediaControl.mediaControlChip.text = episode.audio_length_sec.toDuration()
         }
     }
 }

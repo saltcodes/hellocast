@@ -7,13 +7,17 @@ import android.view.ViewGroup
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import com.bumptech.glide.Glide
 import com.google.android.material.transition.MaterialSharedAxis
 import kotlinx.android.synthetic.main.fragment_episode_details.view.*
 import kotlinx.android.synthetic.main.toolbar_layout.view.*
+import me.johnyoat.hellocast.R
 import me.johnyoat.hellocast.data.episodedata.Episode
 import me.johnyoat.hellocast.databinding.FragmentEpisodeDetailsBinding
+import me.johnyoat.hellocast.ext.popBackStack
 import me.johnyoat.hellocast.ext.toDateString
+import me.johnyoat.hellocast.ext.toDuration
 
 
 class EpisodeDetailsFragment : Fragment() {
@@ -46,6 +50,10 @@ class EpisodeDetailsFragment : Fragment() {
 
         binding.root.toolbarTitle.text = "Episode"
 
+        binding.root.backBtn.setOnClickListener {
+            popBackStack()
+        }
+
         viewModel.getEpisode(episode.id)
             .observe(viewLifecycleOwner) { episodeData ->
                 setEpisode(
@@ -67,6 +75,7 @@ class EpisodeDetailsFragment : Fragment() {
                 HtmlCompat.fromHtml(description, HtmlCompat.FROM_HTML_MODE_COMPACT)
         }
         binding.podcastTime.podcastTime.text = episode?.pubDate?.toDateString()
+        binding.mediaControlChip.text = episode?.audio_length_sec?.toDuration()
     }
 
 }

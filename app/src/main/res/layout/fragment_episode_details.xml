@@ -107,12 +107,17 @@
             android:id="@+id/shareBtn"/>
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/episodeDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-        android:text="@string/loading_description" />
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/episodeDescription"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginEnd="16dp"
+          android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+          android:text="@string/loading_description"
+          android:paddingBottom="54dp"/>
+  </androidx.core.widget.NestedScrollView>
 </LinearLayout>
